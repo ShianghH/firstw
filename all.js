@@ -44,9 +44,9 @@ console.log(`Alex 買完課程了，他一共剩下 ${AlexBudget} 元`);
 
 const classCount = 14;
 const classPrice = 180;
-const total = classCount * classPrice;  
+classTotal = classCount * classPrice;  
 
-console.log(total);
+console.log(classTotal);
 
 
 
@@ -57,8 +57,10 @@ console.log(total);
 // 4.3. Alex 望向天空，看到天上有 5 朵白雲和 1 顆太陽
 
 const isRedLight = true;
-
-
+let greenLight = 28;
+let waitMortocycle = 8;
+let cloud = 5;
+const sun = 1;
 
 
 
@@ -76,6 +78,9 @@ const isRedLight = true;
 
 let myWater = 2000; // 水壺容量
 myWater -= 500; // 早上喝了 500cc
+myWater -= 800;
+myWater += 1000;
+myWater -= 700;
 
 console.log(`Alex 的水壺還有 ${myWater}cc 的水`);
 
@@ -88,6 +93,14 @@ console.log(`Alex 的水壺還有 ${myWater}cc 的水`);
 
 let totalBill = 0;
 const machineUsePrice = 50;
+const groupClassPrice = 150;
+const machineUseTime = 3;
+const groupClassTime = 2;
+machineUsePriceTotal = machineUsePrice * machineUseTime;
+groupClassesTotal = groupClassPrice * groupClassTime;
+total = machineUsePriceTotal + groupClassesTotal;
+totalBill = total;
+
 
 console.log(
   `Anna 本週器械使用費共 ${machineUsePriceTotal} 元，團體課費用共 ${groupClassesTotal} 元，一共消費金額是 ${total}元`
@@ -97,31 +110,45 @@ console.log(
 // 情境：請依照以下程式碼告知答案是多少，並在下方用註解方式寫上這五行程式碼做了什麼事
 // 以下程式碼請勿變更
 let a = 8; // 範例：宣告了一個 a 的變數，並賦予了一個 8 的數字型別
-let b = 0;
-a = 13;
-a = b + 4;
-a - b;
-b += 1;
+let b = 0; //宣告一個b的變數,並賦予一個 0 的數字型型別
+a = 13; //重新賦予變數 a 的值為13
+a = b + 4; //重新賦予變數 a 為變數 b+4 
+a - b; //計算 a 與 b 的差值
+b += 1; // 將變數 b 的值加1  
+
+// a = 4 , b = 1  
+
+
 
 // ### 題目九：型別查詢
 // 請不要觀看 console.log，透過註解告知解答每個變數的型別
-let c = 'world';
-let d = 456;
-let e = c + d;
-let f = false;
-let g = d + d;
-let h = f + g;
+let c = 'world'; //字串型別 (string)
+let d = 456; // 數字型別 (number)
+let e = c + d; // 字串型別 (string)
+let f = false; //布林值 (boolean)
+let g = d + d; //數字型別 (number)
+let h = f + g; //數字型別 (number)
 
 // 請從以下新增註解，告知上面每行各別是哪些型別
-// a 是 string
-// b 是 ???
+// a 是 number
+// b 是 number
+// c 是 string
+// d 是 number
+// e 是 string
+// f 是 boolean
+// g 是 number
+// h 是 number
+
+
 
 // ### 題目十：傳值與傳參考
 // 情境：請依照程式碼告知答案是多少，並在下方用註解方式寫上這五行程式碼做了什麼事
 // 以下程式碼請勿變更
 
-let numberArr1 = [5, 10, 15];
-let numberArr2 = numberArr1;
-numberArr2.push(20);
-numberArr2 = [25, 30, 35];
+let numberArr1 = [5, 10, 15]; // 宣告變數 numberArr1 指向一個包含 [5, 10, 15]的陣列
+let numberArr2 = numberArr1; //宣告變數 numberArr2 指向 numberArr1 為同一陣列
+numberArr2.push(20); // 將 20 加入 numberArr2 陣列中
+numberArr2 = [25, 30, 35]; // 將 numberArr2 重新指向一個新的陣列的值為 [25, 30, 35]
 console.log(numberArr1, numberArr2);
+
+// numberArr1 為 [5, 10, 15, 20], numberArr2 為 [25, 30, 35]
